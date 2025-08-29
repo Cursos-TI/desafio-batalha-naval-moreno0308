@@ -11,7 +11,8 @@ int main() {
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Inicializa o tabuleiro com 0s (água)
-       for (int i = 0; i < 10; i++) {
+       for (int i = 0; i < 10; i++) 
+       {
         for (int j = 0; j < 10; j++) {
             tabuleiro[i][j] = 0;
         }
