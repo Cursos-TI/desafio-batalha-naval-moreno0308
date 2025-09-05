@@ -44,7 +44,7 @@ int main() {
         }
     }
 
-        // Navio 3: 3 posições na diagonal da esquer para a direita.
+    // Navio 3: 3 posições na diagonal da esquer para a direita.
     int navio3_linha = 1;
     int navio3_coluna = 1;
     
@@ -52,7 +52,7 @@ int main() {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++)
         {
-           if (navio3_linha + i < 4 && navio3_coluna + j < 6 && (navio3_linha + i == navio3_coluna + j)) {
+           if (navio3_linha + i > 1&& navio3_linha + i < 4 && navio3_coluna + j < 6 && (navio3_linha + i == navio3_coluna + j)) {
             tabuleiro[navio3_linha + i][navio3_coluna + j ] = 3;
         }
         
@@ -61,6 +61,22 @@ int main() {
         }
     }
 
+    // Navio 3: 3 posições na diagonal da esquer para a direita.
+    int navio4_linha = 0;
+    int navio4_coluna = 1;
+    
+    // Posiciona o navio verticalmente
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 7; j++)
+        {
+           if ((((navio4_linha + i)+ (navio4_coluna + j))==8)){
+            tabuleiro[navio4_linha + i][navio4_coluna + j ] = 3;
+        }
+        
+        // Validação básica para garantir que o navio não saia do tabuleiro
+        
+        }
+    }
     // 3. Exibindo o Tabuleiro
     printf("TABULEIRO BATALHA NAVAL\n");
     printf("  "); // Espaço para alinhar com os números das linhas
