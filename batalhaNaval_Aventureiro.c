@@ -21,7 +21,7 @@ int main() {
     // 2. Posicionando os Navios
     // Navio 1: 3 posições, horizontal. Inicia na linha 3, coluna 3.
     // Lembre-se: os índices do array começam em 0.
-    int navio1_linha = 3;
+    int navio1_linha = 5;
     int navio1_coluna = 3;
     
     // Posiciona o navio horizontalmente
@@ -33,7 +33,7 @@ int main() {
     }
     
     // Navio 2: 3 posições, vertical. Inicia na linha 5, coluna 5.
-    int navio2_linha = 5;
+    int navio2_linha = 7;
     int navio2_coluna = 5;
     
     // Posiciona o navio verticalmente
@@ -41,6 +41,23 @@ int main() {
         // Validação básica para garantir que o navio não saia do tabuleiro
         if (navio2_linha + i < 10) {
             tabuleiro[navio2_linha + i][navio2_coluna] = 3;
+        }
+    }
+
+        // Navio 3: 3 posições na diagonal da esquer para a direita.
+    int navio3_linha = 1;
+    int navio3_coluna = 1;
+    
+    // Posiciona o navio verticalmente
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++)
+        {
+           if (navio3_linha + i < 4 && navio3_coluna + j < 6 && (navio3_linha + i == navio3_coluna + j)) {
+            tabuleiro[navio3_linha + i][navio3_coluna + j ] = 3;
+        }
+        
+        // Validação básica para garantir que o navio não saia do tabuleiro
+        
         }
     }
 
