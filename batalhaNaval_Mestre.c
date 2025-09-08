@@ -61,9 +61,9 @@ int main() {
     int navio3_coluna = 7;
     int altura2 = 3;
     for (int i = 0; i < altura2; i++)
-    {   //calcular ponto inicio da piremede
+    {   //calcular ponto inicio da parte da cima do octaedro
         int coluna_inicial2 = navio3_coluna -i;
-        //loop para preencher cada linha da piramede       
+        //loop para preencher cada linha da  cima do octaedro   
      for (int j = 0; j <(2 * i + 1); j++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
         if (navio3_linha + i < LINHA && coluna_inicial2 + j >= 0 && coluna_inicial2 + j < LINHA){
@@ -74,11 +74,12 @@ int main() {
     }
     //  Parte de baixo do octaedro (a pirâmide invertida)
     for (int i = altura2 -2; i >=0; i--)
-    {
+    {    //calcular ponto inicio da parte de baixo do octaedro
         int coluna_inical = navio3_coluna -i;
         int linha_atual = navio3_linha + altura2 + (altura2 - i - 2);
+         //loop para preencher cada linha de baixo do octaedro 
         for (int j = 0; j < (2 * i + 1); j++)
-        {
+        { // Validação básica para garantir que o navio não saia do tabuleiro
             if(linha_atual < LINHA && coluna_inical + j >= 0 && coluna_inical + j < LINHA)
         {tabuleiro[linha_atual][coluna_inical + j] = 3;
 
