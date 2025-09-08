@@ -41,16 +41,17 @@ int main() {
     }
     }
     // Posiciona o navio PRIRAMEDE
-    for (int i = 0; i < 5; i++)
-    {         
-     for (int j = 1; j < 6; j++) {
+    int navio2_linha =5;
+    int navio2_coluna = 2;
+    int altura = 3;
+    for (int i = 0; i < altura; i++)
+    {   //calcular ponto inicio da piremede
+        int coluna_inicial = navio2_coluna -i;
+        //loop para preencher cada linha da piramede       
+     for (int j = 0; j <(2 * i + 1); j++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
-        if (navio1_coluna + j < LINHA && navio1_linha + i == 2 ) {
-            tabuleiro[navio1_linha + i][navio1_coluna + j] = 3;
-        } else if (navio1_linha < LINHA && navio1_coluna + j == 3)
-
-        {
-           tabuleiro[navio1_linha + i][navio1_coluna + j] = 3;
+        if (navio2_linha + i < LINHA && coluna_inicial + j >= 0 && coluna_inicial + j < LINHA){
+            tabuleiro[navio2_linha + i][coluna_inicial + j] = 3;
         }
         
     }
