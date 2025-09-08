@@ -22,62 +22,36 @@ int main() {
     // 2. Posicionando os Navios
     // Navio 1: 3 posições, horizontal. Inicia na linha 3, coluna 3.
     // Lembre-se: os índices do array começam em 0.
-    int navio1_linha = 5;
-    int navio1_coluna = 3;
+    int navio1_linha = 0;
+    int navio1_coluna = 0;
     
     // Posiciona o navio horizontalmente
-    for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 5; i++)
+    { if(navio1_linha + i < LINHA) {
+            tabuleiro[navio1_linha + i][navio1_coluna] = 5;
+        }
+        
+    
+     for (int j = 1; j < 6; j++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
-        if (navio1_coluna + j < LINHA) {
-            tabuleiro[navio1_linha][navio1_coluna + j] = 3;
+        if (navio1_coluna + j < LINHA && navio1_linha + i == 2 ) {
+            tabuleiro[navio1_linha + i][navio1_coluna + j] = 8;
         }
     }
-    
+}
     // Navio 2: 3 posições, vertical. Inicia na linha 5, coluna 5.
-    int navio2_linha = 7;
-    int navio2_coluna = 5;
+    int navio2_linha = 6;
+    int navio2_coluna = 7;
     
     // Posiciona o navio verticalmente
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 6; i++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
         if (navio2_linha + i < LINHA) {
-            tabuleiro[navio2_linha + i][navio2_coluna] = 3;
+            tabuleiro[navio2_linha + i][navio2_coluna] = 5;
         }
     }
 
-    // Navio 3: 3 posições na diagonal da esquer para a direita.
-    int navio3_linha = 1;
-    int navio3_coluna = 1;
     
-    // Posiciona o navio verticalmente
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++)
-        {
-           if (navio3_linha + i > 1&& navio3_linha + i < 4 && navio3_coluna + j < 6 && (navio3_linha + i == navio3_coluna + j)) {
-            tabuleiro[navio3_linha + i][navio3_coluna + j ] = 3;
-        }
-        
-        // Validação básica para garantir que o navio não saia do tabuleiro
-        
-        }
-    }
-
-    // Navio 3: 3 posições na diagonal da esquer para a direita.
-    int navio4_linha = 0;
-    int navio4_coluna = 1;
-    
-    // Posiciona o navio verticalmente
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 7; j++)
-        {
-           if ((((navio4_linha + i)+ (navio4_coluna + j))==8)){
-            tabuleiro[navio4_linha + i][navio4_coluna + j ] = 3;
-        }
-        
-        // Validação básica para garantir que o navio não saia do tabuleiro
-        
-        }
-    }
     // 3. Exibindo o Tabuleiro
     printf("TABULEIRO BATALHA NAVAL\n");
     printf("  "); // Espaço para alinhar com os números das linhas
