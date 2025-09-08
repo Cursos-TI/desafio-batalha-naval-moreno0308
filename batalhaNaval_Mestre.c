@@ -24,31 +24,36 @@ int main() {
     // Lembre-se: os índices do array começam em 0.
     int navio1_linha = 0;
     int navio1_coluna = 0;
-    
-    // Posiciona o navio horizontalmente
+    int soma_linha = 0, soma_coluna =0;    
+    // Posiciona o navio CRUZ
     for (int i = 0; i < 5; i++)
-    { if(navio1_linha + i < LINHA) {
-            tabuleiro[navio1_linha + i][navio1_coluna] = 5;
-        }
-        
-    
+    {         
      for (int j = 1; j < 6; j++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
         if (navio1_coluna + j < LINHA && navio1_linha + i == 2 ) {
-            tabuleiro[navio1_linha + i][navio1_coluna + j] = 8;
+            tabuleiro[navio1_linha + i][navio1_coluna + j] = 3;
+        } else if (navio1_linha < LINHA && navio1_coluna + j == 3)
+
+        {
+           tabuleiro[navio1_linha + i][navio1_coluna + j] = 3;
         }
+        
     }
-}
-    // Navio 2: 3 posições, vertical. Inicia na linha 5, coluna 5.
-    int navio2_linha = 6;
-    int navio2_coluna = 7;
-    
-    // Posiciona o navio verticalmente
-    for (int i = 0; i < 6; i++) {
+    }
+    // Posiciona o navio PRIRAMEDE
+    for (int i = 0; i < 5; i++)
+    {         
+     for (int j = 1; j < 6; j++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
-        if (navio2_linha + i < LINHA) {
-            tabuleiro[navio2_linha + i][navio2_coluna] = 5;
+        if (navio1_coluna + j < LINHA && navio1_linha + i == 2 ) {
+            tabuleiro[navio1_linha + i][navio1_coluna + j] = 3;
+        } else if (navio1_linha < LINHA && navio1_coluna + j == 3)
+
+        {
+           tabuleiro[navio1_linha + i][navio1_coluna + j] = 3;
         }
+        
+    }
     }
 
     
