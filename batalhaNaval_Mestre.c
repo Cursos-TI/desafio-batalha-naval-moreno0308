@@ -56,6 +56,27 @@ int main() {
         
     }
     }
+     // Posiciona o navio octaedro
+    int navio3_linha =3;
+    int navio3_coluna = 7;
+    int altura2 = 2;
+    for (int i = 0; i < altura2; i++)
+    {   //calcular ponto inicio da piremede
+        int coluna_inicial2 = navio3_coluna -i;
+        //loop para preencher cada linha da piramede       
+     for (int j = 0; j <(2 * i + 1); j++) {
+        // Validação básica para garantir que o navio não saia do tabuleiro
+        if (navio3_linha + i < LINHA && coluna_inicial2 + j >= 0 && coluna_inicial2 + j < LINHA){
+            tabuleiro[navio2_linha + i][coluna_inicial2 + j] = 3;
+        }
+        
+    }
+    }
+    for (int i = altura2 -2; i >=0; i--)
+    {
+        
+    }
+    
 
     
     // 3. Exibindo o Tabuleiro
@@ -93,6 +114,7 @@ int main() {
     // 1 1 1 1 1
     
     // Exemplo para habilidade em octaedro:
+
     // 0 0 1 0 0
     // 0 1 1 1 0
     // 0 0 1 0 0
