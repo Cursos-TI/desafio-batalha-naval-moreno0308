@@ -59,7 +59,7 @@ int main() {
      // Posiciona o navio octaedro
     int navio3_linha =3;
     int navio3_coluna = 7;
-    int altura2 = 2;
+    int altura2 = 3;
     for (int i = 0; i < altura2; i++)
     {   //calcular ponto inicio da piremede
         int coluna_inicial2 = navio3_coluna -i;
@@ -67,13 +67,23 @@ int main() {
      for (int j = 0; j <(2 * i + 1); j++) {
         // Validação básica para garantir que o navio não saia do tabuleiro
         if (navio3_linha + i < LINHA && coluna_inicial2 + j >= 0 && coluna_inicial2 + j < LINHA){
-            tabuleiro[navio2_linha + i][coluna_inicial2 + j] = 3;
+            tabuleiro[navio3_linha + i][coluna_inicial2 + j] = 3;
         }
         
     }
     }
+    //  Parte de baixo do octaedro (a pirâmide invertida)
     for (int i = altura2 -2; i >=0; i--)
     {
+        int coluna_inical = navio3_coluna -i;
+        int linha_atual = navio3_linha + altura2 + (altura2 - i - 2);
+        for (int j = 0; j < (2 * i + 1); j++)
+        {
+            if(linha_atual < LINHA && coluna_inical + j >= 0 && coluna_inical + j < LINHA)
+        {tabuleiro[linha_atual][coluna_inical + j] = 3;
+
+        }
+        }
         
     }
     
